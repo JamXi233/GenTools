@@ -1,0 +1,19 @@
+﻿<Window
+    x:Class="GenTools.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GenTools"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <NavigationView x:Name="NavView" ItemInvoked="NavView_ItemInvoked" PaneTitle="罗德岛桌面终端">
+        <NavigationView.MenuItems>
+            <NavigationViewItem Icon="Play" Content="主页" Tag="MainView" />
+            <NavigationViewItem Icon="Share" Content="启动游戏" Tag="StartGameView" />
+            <NavigationViewItem Icon="Globe" Content="论坛" Tag="FlarumView" />
+            <NavigationViewItem Icon="People" Content="关于" Tag="AboutView" />
+        </NavigationView.MenuItems>
+        <Frame x:Name="ContentFrame"/>
+    </NavigationView>
+</Window>
