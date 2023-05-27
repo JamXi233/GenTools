@@ -31,7 +31,7 @@
             <NavigationView x:Name="gachaNav" Grid.Column="0" PaneDisplayMode="Top" IsSettingsVisible="False" IsBackButtonVisible="Collapsed" SelectionChanged="NavView_SelectionChanged" Visibility="Collapsed">
                 <NavigationView.MenuItems>
                     <NavigationViewItem  Content="角色池" Tag="CharacterGacha" IsSelected="True" />
-                    <NavigationViewItem  Content="光锥池" Tag="LightConeGacha" />
+                    <NavigationViewItem  Content="武器池" Tag="LightConeGacha" />
                     <NavigationViewItem  Content="常驻池" Tag="RegularGacha" />
                     <NavigationViewItem  Content="新手池" Tag="NewbieGacha" />
                 </NavigationView.MenuItems>
