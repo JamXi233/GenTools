@@ -128,7 +128,6 @@ namespace GenTools.Views
         {
             string userDocumentsFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             DeleteFolder(userDocumentsFolderPath + "\\JSG-LLC\\GenTools\\", Close);
-            _ = ClearLocalDataAsync(Close);
         }
 
         private void DeleteFolder(string folderPath, String Close)
@@ -138,6 +137,7 @@ namespace GenTools.Views
                 try { Directory.Delete(folderPath, true); }
                 catch (IOException) { }
             }
+            _ = ClearLocalDataAsync(Close);
         }
 
         public async Task ClearLocalDataAsync(String Close)

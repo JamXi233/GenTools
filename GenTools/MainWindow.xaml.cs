@@ -256,7 +256,7 @@ namespace GenTools
                 ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
                 ApplicationDataContainer keyContainer = localSettings.Containers[keyPath];
                 string extractionPath = Path.Combine(userDocumentsFolderPath + FileFolder, ExtractedFolder);
-                if (File.Exists(extractionPath+ "\\GenToolsHelper.exe"))
+                if (File.Exists(extractionPath+ "\\GenTools_FPSUnlock.exe"))
                 {
                     string valueFirstRun = "Config_FirstRun";
                     FirstRun.Visibility = Visibility.Collapsed;
