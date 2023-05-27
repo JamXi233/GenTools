@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "GenTools (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "GenTools (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

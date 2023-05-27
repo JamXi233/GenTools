@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="GenTools.Views.GachaView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GenTools.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Transparent">
+
+    <Grid HorizontalAlignment="Stretch" Margin="24">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" HorizontalAlignment="Left" >
+            <StackPanel HorizontalAlignment="Stretch">
+                <ToggleButton x:Name="ProxyButton" Content="开启代理" Click="ProxyButton_Click" Margin="0 0 0 8"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Stretch" Orientation="Horizontal">
+                <TextBlock Text="状态:" />
+                <TextBlock x:Name="gacha_status" Text="等待操作"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Grid Grid.Row="1" HorizontalAlignment="Stretch">
+
+
+            <NavigationView x:Name="gachaNav" Grid.Column="0" PaneDisplayMode="Top" IsSettingsVisible="False" IsBackButtonVisible="Collapsed" SelectionChanged="NavView_SelectionChanged" Visibility="Collapsed">
+                <NavigationView.MenuItems>
+                    <NavigationViewItem  Content="角色池" Tag="CharacterGacha" IsSelected="True" />
+                    <NavigationViewItem  Content="光锥池" Tag="LightConeGacha" />
+                    <NavigationViewItem  Content="常驻池" Tag="RegularGacha" />
+                    <NavigationViewItem  Content="新手池" Tag="NewbieGacha" />
+                </NavigationView.MenuItems>
+                <Frame x:Name="gachaFrame"/>
+            </NavigationView>
+
+        </Grid>
+
+        <TeachingTip x:Name="GachaLink"
+            Target="{x:Bind ProxyButton}"
+            Title="代理"
+            Subtitle="SubTitle"
+	        CloseButtonContent="关闭">
+            <TeachingTip.IconSource>
+                <SymbolIconSource Symbol="Admin" />
+            </TeachingTip.IconSource>
+        </TeachingTip>
+
+    </Grid>
+</Page>
