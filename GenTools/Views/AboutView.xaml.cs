@@ -286,6 +286,7 @@ namespace GenTools.Views
                             update_Latest_Name.Text = $"软件名称: {latestReleaseInfo.Name}";
                             update_Latest_Version.Text = $"版本号: {latestReleaseInfo.Version}";
                             update_Current_Version.Text = $"当前版本: {content}";
+                            update_Latest_Changelog.Text = $"更新日志: \n{latestReleaseInfo.Changelog}";
                             update_Download.IsEnabled = true;
                             depend_Grid.Visibility = Visibility.Visible;
                             depend_Progress_Grid.Visibility = Visibility.Collapsed;
@@ -306,6 +307,7 @@ namespace GenTools.Views
                         update_Latest_Name.Text = $"软件名称: {latestReleaseInfo.Name}";
                         update_Latest_Version.Text = $"版本号: {latestReleaseInfo.Version}";
                         update_Current_Version.Text = $"当前版本: {version}";
+                        update_Latest_Changelog.Text = $"更新日志: \n{latestReleaseInfo.Changelog}";
                         update_Download.IsEnabled = true;
                         update_Grid.Visibility = Visibility.Visible;
                         update_Progress_Grid.Visibility = Visibility.Collapsed;
@@ -356,11 +358,10 @@ namespace GenTools.Views
                     throw new InvalidOperationException($"Invalid update service value: {localSettings.Values["Config_UpdateService"]}");
             }
             Trace.WriteLine(fileUrl);
-            string UpdateFileFolder = "\\JSG-LLC\\GenTools\\Updates";
+            string UpdateFileFolder = "\\JSG-LLC\\Updates\\GenTools\\";
             string UpdateFileName = "GenTools_" + latestReleaseInfo.Version + "_x64.zip";
             string UpdateExtractedFolder = "GenTools_" + latestReleaseInfo.Version + "_x64";
             string userDocumentsFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            DeleteFolder(userDocumentsFolderPath + "\\JSG-LLC\\GenTools\\Depends\\", "1");
             string localFilePath = Path.Combine(userDocumentsFolderPath + UpdateFileFolder, UpdateFileName);
             ToggleUpdateGridVisibility(false);
             update_Download.IsEnabled = false;

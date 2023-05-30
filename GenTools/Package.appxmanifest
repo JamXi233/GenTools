@@ -9,7 +9,7 @@
   <Identity
     Name="c2e5e07e-b7db-4c2e-a5d4-8f3d7a517c9c"
     Publisher="CN=JamXi"
-    Version="1.0.1.0" />
+    Version="1.0.2.0" />
 
   <Properties>
     <DisplayName>GenTools(原神工具箱)</DisplayName>
